@@ -67,4 +67,4 @@ and print any that have an input matching the maximum frequency.
 - [ ] Add more rigorous input verification
 - [ ] Figure out if there is a more efficient way to search for the given dates
       in the csv file (load the whole file then perform a binary search?)
-- [ ]
+- [ ] Split program into functions/compartmentalize code
