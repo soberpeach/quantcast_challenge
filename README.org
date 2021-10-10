@@ -16,7 +16,9 @@ The program takes three command line arguments:
 3. UTC time
 
 To use the program, first compile it with the command ~javac Cookie.java~. You
-can then run the program using ~java Cookie $FILE -d $TIME~. For example:
+can then run the program using ~java Cookie $FILE -d $TIME~. For example, the
+command:
+
 ~java Cookie most_active_cookie_log.csv -d 2018-12-08~
 
 Given a sample CSV file:
@@ -40,8 +42,11 @@ fbcn5UAVanZf6UtG,2018-12-08T09:30:00+00:00
 4sMM2LxV07bPJzwf,2018-12-07T23:30:00+00:00
 
 The above command will produce:
+
 fbcn5UAVanZf6UtG
+
 SAZuXPGUrfbcn5UA
+
 4sMM2LxV07bPJzwf
 
 * How It Works
