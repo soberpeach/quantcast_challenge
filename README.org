@@ -6,4 +6,49 @@ This is a program that takes parses a CSV file of the format
 
 ~cookie,UTC Timestamp~
 
-and returns the most frequent cookies on a specific date.
+and returns the most frequent cookies on a specific date to standard out.
+
+* Usage
+
+The program takes three command line arguments:
+1. A file name
+2. -d
+3. UTC time
+
+To use the program, first compile it with the command ~javac Cookie.java~. You
+can then run the program using ~java Cookie $FILE -d $TIME~. For example: ~java
+Cookie most_active_cookie_log.csv -d 2018-12-08~
+
+Given a sample CSV file:
+
+cookie,timestamp
+AtY0laUfhglK3lC7,2018-12-09T14:19:00+00:00
+SAZuXPGUrfbcn5UA,2018-12-09T10:13:00+00:00
+5UAVanZf6UtGyKVS,2018-12-09T07:25:00+00:00
+AtY0laUfhglK3lC7,2018-12-09T06:19:00+00:00
+SAZuXPGUrfbcn5UA,2018-12-08T22:03:00+00:00
+4sMM2LxV07bPJzwf,2018-12-08T21:30:00+00:00
+fbcn5UAVanZf6UtG,2018-12-08T09:30:00+00:00
+4sMM2LxV07bPJzwf,2018-12-07T23:30:00+00:00
+
+The above command will produce:
+fbcn5UAVanZf6UtG
+SAZuXPGUrfbcn5UA
+4sMM2LxV07bPJzwf
+
+* How It Works
+
+The program first checks to see whether or not the command line arguments are in
+the correct format and then if the input file exists. If everything is
+determined to be correct, then the program will take the input file, read in
+line by line and check whether the current line's date matches the given input
+date. If it does, add to that cookie's frequency on the given date (using a
+hashmap), and keep track of the maximum frequency of all the cookies on that
+date. Once the input date has been processed, loop through all the input dates
+and print any that have an input matching the maximum frequency.
+
+* TODOS
+
+- [ ] Add tests
+- [ ] Add build framework
+- [ ] Add more rigorous input verification
