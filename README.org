@@ -1,0 +1,9 @@
+#+title: Most Active Cookie Challenge
+
+* The Program
+
+This is a program that takes parses a CSV file of the format
+
+~cookie,UTC Timestamp~
+
+and returns the most frequent cookies on a specific date.
